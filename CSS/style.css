@@ -1,0 +1,245 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --orange-color: #FF914D;  /* Orange */
+    --green-color: #7FD858; /* Green */
+    --main-dark: #333333;    /* Black */
+    --text-color: #ffffff; /* White */
+    --p-color: #C6C6C6; /* Light Grey */
+    --main-font: "Lexend", sans-serif; /* Font */
+    --secondary-font: "Helvetica Neue", sans-serif; /* Font */
+
+    --standard: 300;
+    --medium: 400;
+    --max: 800;
+
+    --small: 12px;
+    --normal: 16px;
+    --medium: 20px;
+    --large: 96px;
+}
+  
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  padding: 0 50px;
+  height: 100dvh;
+  background-image: url('../assets/GlowBG.svg'), url('../assets/BG.png');
+  background-color: #161616; /* base background color */
+  background-size: cover, cover; /* first background covers, second is contained */
+  background-position: bottom right, top right; /* positions for each background */
+  background-repeat: no-repeat, no-repeat; /* repeat settings for each background */
+  /* background: #161616 url(../assets/GlowBG.svg) no-repeat center center / cover; */
+  /* background-color: #161616 ;
+  background-image: url(../assets/GlowBG.svg);
+  background-size: cover;
+  background-repeat: no-repeat; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--main-font);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.content{
+  width: 100%;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  font-family: var(--secondary-font);
+  margin-top: 65px;
+}
+
+/* Nav */
+nav {
+  width: 100%;
+  margin-top: 50px;
+  height: 95px;
+  padding: 1.5rem 2.5rem;
+  background-color: #1c1c1c;
+  border: 1px solid #262626;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+nav svg {
+  display: none;
+}
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+}
+.overview{
+  display: flex;
+}
+nav li {
+  list-style: none;
+  margin: 0 0.5rem;
+}
+nav a {
+    font-weight: var(--medium);
+  text-decoration: none;
+  color: rgb(220, 220, 220);
+}
+nav a:hover {
+  color: #a0ebfd;
+}
+nav a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: #a0ebfd;
+  width: 0%;
+  transition: all ease-in-out 300ms;
+}
+nav a:hover::after {
+  width: 100%;
+}
+#check,
+.menu {
+  display: none;
+}
+
+.nav-items button{
+    display: none;
+}
+
+
+.button_style{
+    padding: 14px 30px;
+    border-radius: 82px;
+    border: none;
+    background-color: var(--orange-color);
+    color: var(--text-color);
+    font-size: var(--normal);
+    cursor: pointer;
+    font-weight: var(--standard);
+}
+
+.content_image{
+  background-image: url('../assets/Abstract.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.content_text{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* max-width: 300px; */
+}
+
+.content_text h1{
+  font-size: var(--large);
+  color: var(--text-color);
+  font-weight: var(--medium);
+}
+
+.content_text p{
+  font-size: var(--medium);
+  font-weight: var(--standard);
+  color: var(--p-color);
+  line-height: 30px;
+  max-width: 700px;
+}
+
+.green{
+  color: var(--green-color);
+}
+
+
+
+/* Responsive */
+@media (max-width: 750px) {
+  body{
+    padding: 0;
+  }
+  .nav-items {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    transition: all ease-in-out 500ms;
+    display: none;
+
+  }
+  .overview {
+    flex-direction: column;
+    width: auto;
+  }
+  .overview {
+    margin-top: 150px;
+  }
+
+  nav {
+    margin-top: 0;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+  }
+  nav svg {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+  }
+  nav li {
+    margin: 1rem 0;
+  }
+  nav a {
+    display: inline-block;
+  }
+  nav a:hover {
+    margin-left: 2px;
+    transition: all ease-in-out 300ms;
+  }
+  .menu {
+    display: inline-block;
+    position: fixed;
+    right: 2.5rem;
+    z-index: 99;
+  }
+  #check:checked ~ .nav-items {
+    right: 0;
+  }
+
+  .nav-items button{
+    display: block;
+}
+
+.button_for_nav{
+    display: none;
+}
+}
+
+/* Show the nav items when the checkbox is checked */
+#check:checked ~ .nav-items {
+    display: block;
+}
