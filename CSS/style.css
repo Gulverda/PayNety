@@ -100,7 +100,7 @@ nav a {
 nav a:hover {
   color: #a0ebfd;
 }
-nav a::after {
+/* nav a::after {
   content: "";
   display: block;
   height: 3px;
@@ -110,7 +110,7 @@ nav a::after {
 }
 nav a:hover::after {
   width: 100%;
-}
+} */
 #check,
 .menu {
   display: none;
@@ -135,10 +135,12 @@ nav a:hover::after {
 .content_image{
   background-image: url('../assets/Abstract.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: contain;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
+  min-width: 250px;
+  min-height: 250px
 }
 
 .content_text{
@@ -146,7 +148,7 @@ nav a:hover::after {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* max-width: 300px; */
+  max-width: 700px;
 }
 
 .content_text h1{
@@ -167,10 +169,51 @@ nav a:hover::after {
   color: var(--green-color);
 }
 
+.button_style .icon{
+  display: none;
+}
+
 
 
 /* Responsive */
-@media (max-width: 750px) {
+@media screen and (max-width: 1052px) {
+  body{
+    padding: 30px;
+  }
+
+  nav{
+    margin-top: 10px;
+    padding: 1.5rem;
+  }
+
+  .logo img{
+    width: 100px;
+  }
+
+  .for_nav{
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .button_style .text{
+    display: none;
+  }
+
+  .button_style .icon{
+    display: block;
+  }
+
+  .content_text h1{
+    font-size: 78px;
+  }
+  .content_text p{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 834px) {
   body{
     padding: 0;
   }
@@ -237,6 +280,30 @@ nav a:hover::after {
 .button_for_nav{
     display: none;
 }
+
+.content{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.content_text h1{
+  font-size: 54px;
+}
+
+.content_text p{
+  font-size: 20px;
+}
+}
+
+@media screen and (max-width: 420px) {
+  .content_text h1{
+    font-size: 36px;
+  }
+  .content_text p{
+    font-size: 16px;
+  }
 }
 
 /* Show the nav items when the checkbox is checked */
