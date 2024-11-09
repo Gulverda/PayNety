@@ -25,6 +25,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -307,6 +308,7 @@ nav a:hover::after {
     justify-content: space-between;
     align-items: center;
     position: sticky;
+    border: none;
     top: 0;
   }
   nav svg {
@@ -326,7 +328,7 @@ nav a:hover::after {
   }
   .menu {
     display: inline-block;
-    position: fixed;
+    /* position: fixed; */
     right: 2.5rem;
     z-index: 99;
   }
