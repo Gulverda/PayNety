@@ -37,69 +37,122 @@
       ]
     }
     </script>
+
+
+    <style>
+      #mission-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+      }
+    
+      #mission-table th, #mission-table td {
+        border: 1px solid #ccc;
+        padding: 16px;
+      }
+    
+      .mission_headline h2 {
+        margin: 0;
+      }
+    
+      .icon-cell img {
+        width: 40px;
+        height: 40px;
+      }
+    </style>
     
 </head>
 <body>
-    <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="menu">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="#fff"
-            class="bi bi-list"
-            viewBox="0 0 16 16"
-            aria-label="Toggle navigation menu"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-            />
-          </svg>
-        </label>
+  <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="#fff"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+          aria-label="Toggle navigation menu"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          />
+        </svg>
+      </label>
 
-        <div class="logo">
-          <a href="#">
-            <img src="./assets/icon.svg" alt="PayNety Logo">
-          </a>
+      <div class="logo">
+        <a href="#">
+          <img src="./assets/icon.svg" alt="PayNety Logo">
+        </a>
+      </div>
+      <div class="nav-items">
+        <ul class="overview">
+          <li><a href="#mission">Mission and Goals</a></li>
+          <li><a href="#strategy">Development Strategy</a></li>
+          <li><a href="#plans">Future Plans</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li>
+              <button class="button_style" aria-label="Contact PayNety via Email">info@PayNety.com</button>
+          </li>
+        </ul>
+      </div>
+      <div class="button_for_nav">
+          <button class="button_style for_nav" aria-label="Contact PayNety via Email">
+            <span class="text">info@PayNety.com</span>
+            <span class="icon"><img src="./assets/gmail.svg" alt="Gmail Icon" width="80%" height="80%"></span>
+          </button>
+      </div>
+  </nav>
+
+  <div class="container">
+      <div class="content">
+          <div class="content_text">
+              <h1>Transform Your <span class="green">Cash</span> Into the Digital Universe</h1>
+              <p>
+                PayNety offers an innovative cash-to-digital payment solution, allowing users to complete utility payments, mobile top-ups, insurance fees, and money transfers. Our kiosks, planned for deployment in 2025, bridge cash transactions with digital ease. We’re currently securing the necessary licenses to ensure a fully compliant and reliable service.
+              </p>
+          </div>
+          <div class="content_image">
+              <!-- Uncomment and replace with the appropriate image path -->
+              <!-- <img src="./assets/Abstract.png" alt="Digital Transaction Illustration" width="100%" height="100%"> -->
+          </div>
+      </div>
+      <button class="button_style" style="margin-top: 51px; width: 227px;" aria-label="Learn more about PayNety">LEARN MORE</button>
+  </div>
+
+  <!-- Mission and Goals Section -->
+  <div class="mission_container">
+    <section id="mission" class="mission-goals">
+      <div class="mission_headline">
+        <h2>Mission and Goals</h2>
+      <p>Mission Statement: "PayNety's mission is to simplify financial transactions and provide trusted solutions
+        <br>that allow users to access digital payment services using cash, easily and securely
+      </p>
+      </div>
+      <div class="grid-container">
+          <div class="mission-item">
+            <img src="./assets/icons/Provider.svg" alt="">
+            <p>Provide fast and convenient payment system</p>
+          </div>
+          <div class="mission-item">
+            <img src="./assets/icons/chart.svg" alt="">
+            <p>Increase accessibility to digital payments</p>
+          </div>
+          <div class="mission-item">
+            <img src="./assets/icons/Financial.svg" alt="">
+            <p>Simplify financial lives for our users</p>
+          </div>
+          <div class="mission-item">
+            <img src="./assets/icons/Guarantee.svg" alt="">
+            <p>Guarantee secure and reliable transactions</p>
         </div>
-        <div class="nav-items">
-          <ul class="overview">
-            <li><a href="#mission">Mission and Goals</a></li>
-            <li><a href="#strategy">Development Strategy</a></li>
-            <li><a href="#plans">Future Plans</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li>
-                <button class="button_style" aria-label="Contact PayNety via Email">info@PayNety.com</button>
-            </li>
-          </ul>
-        </div>
-        <div class="button_for_nav">
-            <button class="button_style for_nav" aria-label="Contact PayNety via Email">
-              <span class="text">info@PayNety.com</span>
-              <span class="icon"><img src="./assets/gmail.svg" alt="Gmail Icon" width="80%" height="80%"></span>
-            </button>
-        </div>
-    </nav>
-    
-    <div class="container">
-        <div class="content">
-            <div class="content_text">
-                <h1>Transform Your <span class="green">Cash</span> Into the Digital Universe</h1>
-                <p>
-                  PayNety offers an innovative cash-to-digital payment solution, allowing users to complete utility payments, mobile top-ups, insurance fees, and money transfers. Our kiosks, planned for deployment in 2025, bridge cash transactions with digital ease. We’re currently securing the necessary licenses to ensure a fully compliant and reliable service.
-                </p>
-            </div>
-            <div class="content_image">
-                <!-- Uncomment and replace with the appropriate image path -->
-                <!-- <img src="./assets/Abstract.png" alt="Digital Transaction Illustration" width="100%" height="100%"> -->
-            </div>
-        </div>
-        <button class="button_style" style="margin-top: 51px; width: 227px;" aria-label="Learn more about PayNety">LEARN MORE</button>
-      
-    </div>
+      </div>
+  </section>
+  </div>
 </body>
+
 
 <script src="./JS/script.js"></script>
 </html>

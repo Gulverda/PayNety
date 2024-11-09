@@ -46,12 +46,35 @@ body{
   font-family: var(--main-font);
 }
 
+
+body::after {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  top: 100dvh; /* Starts after the initial viewport height */
+  left: 0;
+  width: 100%;
+  height: 100dvh; /* This is the height of the 3rd background image */
+  background-image: url('../assets/OrangeBG.png'), url('../assets/GlowOrange.png');
+  background-size: cover, cover;
+  background-position: right, top right;
+  background-repeat: no-repeat, no-repeat;
+}
+
 .container{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 1440px;
+}
+
+.mission_container{
+  z-index: -1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content{
@@ -133,12 +156,13 @@ nav a:hover::after {
 }
 
 .content_image {
-  background-image: url('../assets/Money.png');
+  background-image: url('../assets/Abstract.png');
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
-  width: 100%;
-  height: 100%;
+  z-index: -1;
+  width: 95%;
+  height: 95%;
   min-width: 250px;
   min-height: 250px;
   animation: levitateAndRotate 3s infinite ease-in;
@@ -196,6 +220,16 @@ nav a:hover::after {
 
 
 /* Responsive */
+@media screen and (max-width: 1240px) {
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(350px, 1fr)) !important;
+  }
+
+  .mission-item{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
 @media screen and (max-width: 1052px) {
   body{
     padding: 30px;
@@ -236,6 +270,13 @@ nav a:hover::after {
 @media screen and (max-width: 834px) {
   body{
     padding: 0;
+  }
+
+  .mission_container{
+    padding: 20px !important;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(250px, 1fr)) !important;
   }
   .nav-items {
     position: fixed;
@@ -317,6 +358,50 @@ nav a:hover::after {
 }
 }
 
+@media screen and (max-width: 520px) {
+  .mission_container{
+    padding: 20px !important;
+  }
+  .grid-container {
+    grid-template-columns: repeat(1, minmax(250px, 1fr)) !important;
+  }
+
+  .mission-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .mission_headline{
+    padding: 30px !important;
+    text-align: center !important;
+  }
+
+  .mission-item img{
+    /* width: 30px;
+    height: 30px; */
+    max-width: 50px;
+    max-height: 50px;
+    padding: 10px !important;
+  }
+
+  .mission-goals h2{
+    font-size: 32px !important;
+    font-weight: var(--medium);
+  }
+
+  .mission-goals p{
+    margin-top: 8px;
+    font-size: 12px !important;
+  }
+
+  .mission-item p{
+    font-size: 16px !important;
+    margin: 0 !important;
+  }
+}
+
 @media screen and (max-width: 420px) {
   .content_text h1{
     font-size: 36px;
@@ -329,4 +414,72 @@ nav a:hover::after {
 /* Show the nav items when the checkbox is checked */
 #check:checked ~ .nav-items {
     display: block;
+}
+
+
+.mission_headline{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 50px;
+}
+
+.mission-goals {
+  max-width: 1440px;
+  width: 100%;
+  z-index: -1;
+  background: rgba(109, 107, 107, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  /* padding: 50px; */
+  margin: 50px 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.mission-goals h2 {
+  width: 100%;
+  font-size: 55px;
+  color: #fff;
+  font-family: var(--secondary-font);
+}
+
+.mission-goals p {
+  font-size: 16px;
+  color: #E6E6E6;
+  font-weight: 300;
+  font-family: var(--secondary-font);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(280px, 1fr));
+  /* margin-top: 20px; */
+}
+
+.mission-item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mission-item{
+  padding: clamp(20px, 5vw, 50px);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.mission-item h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.mission-item p {
+  font-size: 20px;
+  color: #fff;
+  max-width: 220px;
+  margin-top: 30px;
+}
+
+.mission-item img {
+  border: 1px solid #ccc;
+  object-fit: cover;
+  border-radius: 8px;
+  padding: 25px;
 }
