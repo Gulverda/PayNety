@@ -52,3 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(element);
   });
 });
+
+
+
+function sendMail() {
+    window.location.href = "mailto:lukagulverdashvili49@gmail.com";
+  }
