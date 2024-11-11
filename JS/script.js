@@ -90,4 +90,11 @@ function toggleMenu() {
   isMenuOpen = !isMenuOpen;
 }
 
+// Close the menu on scroll if it's open
+window.addEventListener("scroll", () => {
+  if (isMenuOpen) {
+    toggleMenu(); // Close the menu
+  }
+});
+
 
