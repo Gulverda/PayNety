@@ -98,3 +98,39 @@ window.addEventListener("scroll", () => {
 });
 
 
+// Function to initialize the Intersection Observer
+function observeTimeline() {
+  const timelineItems = document.querySelectorAll('.timeline p');
+
+  const observerOptions = {
+    root: null, // Observing relative to the viewport
+    rootMargin: '0px',
+    threshold: 0.5, // Trigger when 50% of the element is visible
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the 'in-view' class to trigger the animation when the element comes into view
+        entry.target.classList.add('in-view');
+      } else {
+        // Remove the 'in-view' class when the element leaves the view (optional for reverse animation)
+        entry.target.classList.remove('in-view');
+      }
+    });
+  }, observerOptions);
+
+  // Start observing each timeline item
+  timelineItems.forEach(item => {
+    observer.observe(item);
+  });
+}
+
+// Call the function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', observeTimeline);
+
+
+
+window.onload = function() {
+  window.scrollTo(0, 0);
+};

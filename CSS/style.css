@@ -588,3 +588,75 @@ nav a:hover::after {
   opacity: 1;
   transform: translateY(0); /* Slide to original position */
 }
+
+
+
+
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+main {
+  min-width: 300px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.timeline p {
+  font-size: 1em;
+  line-height: 1.75em;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #ff914d 0%, #7FD858 100%);
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 40px;
+  counter-increment: section;
+  position: relative;
+  color: #ffffff;
+  
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Initially positioned slightly lower */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.timeline p.in-view {
+  opacity: 1; /* Become visible */
+  transform: translateY(0); /* Move to the original position */
+}
+
+.timeline p:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+  
+  &:before {
+    left: 100%; 
+    margin-left: -20px;
+  }
+}
+
+.timeline p:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+  
+  &:before {
+    right: 100%; 
+    margin-right: -20px;
+  }
+}
+
+.timeline p:first-child {
+  border-top: 0;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+}
+
+.timeline p:last-child {
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;
+}
