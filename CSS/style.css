@@ -68,6 +68,7 @@ body::after {
   align-items: center;
   width: 100%;
   max-width: 1440px;
+  height: 100dvh
 }
 
 .mission_container{
@@ -238,6 +239,10 @@ nav a:hover::after {
   animation: arrowAnimation 1s infinite alternate;
 }
 
+.toggle_button{
+  display: none;
+}
+
 @keyframes arrowAnimation {
   0% {
     transform: translateY(0);
@@ -370,6 +375,7 @@ nav a:hover::after {
     background-color: transparent;
     border: none;
     z-index: 99;
+    display: block;
   }
 
   #menu-icon {
