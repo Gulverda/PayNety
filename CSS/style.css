@@ -136,7 +136,7 @@ nav a:hover {
 nav a:hover::after {
   width: 100%;
 } */
-#check,
+/* #check, */
 .menu {
   display: none;
 }
@@ -309,13 +309,18 @@ nav a:hover::after {
     height: 100vh;
     width: 250px;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     background-color: #1c1c1c;
     padding: 2rem;
-    transition: all ease-in-out 500ms;
-    display: none;
-
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%); /* Start off-screen */
   }
+  
+  .nav-items.show {
+    transform: translateX(0); /* Slide in to visible position */
+    display: flex;
+  }
+  
   .overview {
     flex-direction: column;
     width: auto;
@@ -355,9 +360,24 @@ nav a:hover::after {
     right: 2.5rem;
     z-index: 99;
   }
-  #check:checked ~ .nav-items {
-    right: 0;
+
+  .toggle_button{
+    background-color: transparent;
+    border: none;
+    z-index: 99;
   }
+
+  #menu-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  /* When the menu is open (toggle class) change the icon to X */
+  .nav-items.show + .toggle_button #menu-icon {
+    transform: rotate(90deg); /* Rotate the burger to X */
+  }
+  /* #check:checked ~ .nav-items {
+    right: 0;
+  } */
 
   .nav-items button{
     display: block;
@@ -437,9 +457,9 @@ nav a:hover::after {
 }
 
 /* Show the nav items when the checkbox is checked */
-#check:checked ~ .nav-items {
+/* #check:checked ~ .nav-items {
     display: block;
-}
+} */
 
 
 .mission_headline{
