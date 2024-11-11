@@ -253,6 +253,21 @@ nav a:hover::after {
 }
 
 
+@media screen and (max-width: 1300px) {
+  .content_image {
+    width: 80%;
+    height: 80%;
+    min-width: 250px;
+    min-height: 250px;
+    /* animation: levitateAndRotate 3s infinite ease-in; */
+  }
+
+  .content_text h1{
+    font-size: 72px;
+  }
+}
+
+
 /* Responsive */
 @media screen and (max-width: 1240px) {
   .grid-container {
@@ -294,7 +309,7 @@ nav a:hover::after {
   }
 
   .content_text h1{
-    font-size: 78px;
+    font-size: 64px;
   }
   .content_text p{
     font-size: 18px;
