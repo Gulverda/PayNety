@@ -33,8 +33,8 @@ body{
   height: 100dvh;
   background-image: url('../assets/GlowBG.svg'), url('../assets/BG.png');
   background-color: #161616; /* base background color */
-  background-size: cover, cover; /* first background covers, second is contained */
-  background-position: top, top right; /* positions for each background */
+  background-size: cover, contain; /* first background covers, second is contained */
+  background-position: top, right; /* positions for each background */
   background-repeat: no-repeat, no-repeat; /* repeat settings for each background */
   /* background: #161616 url(../assets/GlowBG.svg) no-repeat center center / cover; */
   /* background-color: #161616 ;
@@ -52,14 +52,29 @@ body::after {
   content: '';
   position: absolute;
   z-index: -2;
-  top: 100dvh; /* Starts after the initial viewport height */
+  top: 70dvh; /* Starts after the initial viewport height */
   left: 0;
   width: 100%;
   height: 100dvh; /* This is the height of the 3rd background image */
   background-image: url('../assets/OrangeBG.png'), url('../assets/GlowOrange.png');
-  background-size: cover, cover;
-  background-position: right, top right;
+  background-size: cover, contain;
+  background-position: right, bottom right;
   background-repeat: no-repeat, no-repeat;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  z-index: -3;
+  top: 150dvh; /* Starts after the initial viewport height */
+  left: 0;
+  width: 100%;
+  height: 100dvh; /* This is the height of the 3rd background image */
+  background-image: url('../assets/BG.png'), url('../assets/GlowOrange.png');
+  background-size:  cover, contain;
+  background-position: right, right;
+  background-repeat: no-repeat, no-repeat;
+  rotate: 180deg;
 }
 
 .container{
@@ -427,6 +442,10 @@ nav a:hover::after {
 .content_text p{
   font-size: 20px;
 }
+
+main {
+  padding: 20px;
+}
 }
 
 @media screen and (max-width: 520px) {
@@ -605,6 +624,11 @@ main {
   min-width: 300px;
   max-width: 500px;
   margin: auto;
+}
+
+.timeline_container{
+  margin-top: 150px;
+  height: 100vh;
 }
 
 .timeline p {
