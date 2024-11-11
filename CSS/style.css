@@ -123,7 +123,7 @@ nav a {
   color: rgb(220, 220, 220);
 }
 nav a:hover {
-  color: #a0ebfd;
+  color: var(--orange-color);
 }
 /* nav a::after {
   content: "";
@@ -157,6 +157,11 @@ nav a:hover::after {
     font-weight: var(--standard);
 }
 
+.button_style:hover{
+    background-color: #eb6f23;
+    transition: all 0.3s ease;
+    color: var(--main-dark);
+}
 .content_image {
   background-image: url('../assets/Abstract.png');
   background-repeat: no-repeat;
