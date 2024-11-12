@@ -446,6 +446,24 @@ nav a:hover::after {
 main {
   padding: 20px;
 }
+
+
+.timeline_container h1{
+  font-size: 48px !important;
+}
+.timeline_section{
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.timeline p{
+  padding: 20px !important;
+}
+
+.jelifish svg{
+  width: 200px !important;
+  height: 200px !important;
+}
 }
 
 @media screen and (max-width: 520px) {
@@ -627,9 +645,20 @@ main {
 }
 
 .timeline_container{
+  width: 100%;
   margin-top: 150px;
   height: 100vh;
 }
+
+.timeline_section{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 76px;
+}
+
+/* .jelifish{
+  margin-right: 150px;
+} */
 
 .timeline p {
   font-size: 1em;
@@ -683,4 +712,87 @@ main {
 .timeline p:last-child {
   border-bottom-right-radius:0;
   border-bottom-left-radius:0;
+}
+
+
+.green_span{
+  color: var(--green-color);
+}
+
+.orange_span{
+  color: var(--orange-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes bounce {
+  0%,
+  100% {
+    translate: 0px 36px;
+  }
+  50% {
+    translate: 0px 46px;
+  }
+}
+@keyframes bounce2 {
+  0%,
+  100% {
+    translate: 0px 46px;
+  }
+  50% {
+    translate: 0px 56px;
+  }
+}
+
+@keyframes umbral {
+  0% {
+    stop-color: #d3a5102e;
+  }
+  50% {
+    stop-color: rgba(211, 165, 16, 0.519);
+  }
+  100% {
+    stop-color: #d3a5102e;
+  }
+}
+@keyframes partciles {
+  0%,
+  100% {
+    translate: 0px 16px;
+  }
+  50% {
+    translate: 0px 6px;
+  }
+}
+#particles {
+  animation: partciles 4s ease-in-out infinite;
+}
+#animatedStop {
+  animation: umbral 4s infinite;
+}
+#bounce {
+  animation: bounce 4s ease-in-out infinite;
+  translate: 0px 36px;
+}
+#bounce2 {
+  animation: bounce2 4s ease-in-out infinite;
+  translate: 0px 46px;
+  animation-delay: 0.5s;
 }
