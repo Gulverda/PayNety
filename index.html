@@ -62,53 +62,55 @@
     </div>
   </div>
 
-  <nav>
-    <div class="logo">
-      <a href="#">
-        <img src="./assets/icon.svg" alt="PayNety Logo">
-      </a>
-    </div>
-
-    <button onclick="toggleMenu()" class="toggle_button">
-      <label for="check" class="menu">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="30"
-          height="30"
-          fill="#fff"
-          class="bi bi-list"
-          viewBox="0 0 16 16"
-          aria-label="Toggle navigation menu"
-          id="menu-icon"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-          />
-        </svg>
-      </label>
-    </button>
-      <!-- <input type="checkbox" id="check" /> -->
-      
-
-      <div class="nav-items">
-        <ul class="overview">
-          <li><a href="#mission">Mission and Goals</a></li>
-          <li><a href="#strategy">Development Strategy</a></li>
-          <li><a href="#plans">Future Plans</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li>
-              <button class="button_style" aria-label="Contact PayNety via Email">info@PayNety.com</button>
-          </li>
-        </ul>
+  <div class="nav">
+    <nav>
+      <div class="logo">
+        <a href="#">
+          <img src="./assets/icon.svg" alt="PayNety Logo">
+        </a>
       </div>
-      <div class="button_for_nav">
-          <button onClick="sendMail()" class="button_style for_nav" aria-label="Contact PayNety via Email">
-            <span class="text">info@PayNety.com</span>
-            <span class="icon"><img src="./assets/gmail.svg" alt="Gmail Icon" width="80%" height="80%"></span>
-          </button>
-      </div>
-  </nav>
+  
+      <button onclick="toggleMenu()" class="toggle_button">
+        <label for="check" class="menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="#fff"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+            aria-label="Toggle navigation menu"
+            id="menu-icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </label>
+      </button>
+        <!-- <input type="checkbox" id="check" /> -->
+        
+  
+        <div class="nav-items">
+          <ul class="overview">
+            <li><a href="#mission">Mission and Goals</a></li>
+            <li><a href="#strategy">Development Strategy</a></li>
+            <li><a href="#plans">Future Plans</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li>
+                <button class="button_style" aria-label="Contact PayNety via Email">info@PayNety.com</button>
+            </li>
+          </ul>
+        </div>
+        <div class="button_for_nav">
+            <button onClick="sendMail()" class="button_style for_nav" aria-label="Contact PayNety via Email">
+              <span class="text">info@PayNety.com</span>
+              <span class="icon"><img src="./assets/gmail.svg" alt="Gmail Icon" width="80%" height="80%"></span>
+            </button>
+        </div>
+    </nav>
+  </div>
 
   <div class="container">
       <div class="content">
@@ -314,6 +316,34 @@
       
     </section>
   </div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="./assets/icon.svg" alt="Logo" />
+      </div>
+      <div class="footer-content">
+        <h3>Content</h3>
+        <ul>
+          <li><a href="#mission">Mission and Goals</a></li>
+          <li><a href="#strategy">Development Strategy</a></li>
+          <li><a href="#plans">Future Plans</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>info@PayNety.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Developed by <span class="developer-name">GarGari</span></p>
+      <p>© 2024 — Copyright</p>
+    </div>
+  </footer>
+  <!-- <button id="scroll-to-top">&#8679;</button> -->
+
+  </div>
+
 </body>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

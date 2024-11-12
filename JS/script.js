@@ -134,3 +134,8 @@ document.addEventListener('DOMContentLoaded', observeTimeline);
 window.onload = function() {
   window.scrollTo(0, 0);
 };
+
+
+document.getElementById("scroll-to-top").addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
