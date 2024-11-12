@@ -33,7 +33,7 @@ body{
   height: 100dvh;
   background-image: url('../assets/GlowBG.svg'), url('../assets/BG.png');
   background-color: #161616; /* base background color */
-  background-size: cover, contain; /* first background covers, second is contained */
+  background-size: cover, cover; /* first background covers, second is contained */
   background-position: top, right; /* positions for each background */
   background-repeat: no-repeat, no-repeat; /* repeat settings for each background */
   /* background: #161616 url(../assets/GlowBG.svg) no-repeat center center / cover; */
