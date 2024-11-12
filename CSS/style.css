@@ -943,9 +943,11 @@ footer {
 }
 
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 520px) {
   footer{
-    margin-top: 180px;
+    /* margin-top: 180px; */
+    position: relative;
+    margin-top: 250px !important;
   }
 
   .footer-container {
