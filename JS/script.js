@@ -1,16 +1,24 @@
-// JS/script.js
 document.addEventListener("DOMContentLoaded", function () {
-    // Delay hiding the loader by 2 seconds (2000ms)
-    setTimeout(() => {
-      // Remove the "loading" class from the body to hide the loader
-      document.body.classList.remove("loading");
-  
-      // Optionally, you can hide the loader div directly:
-      const loader = document.getElementById("loader");
-      loader.style.display = "none";
-    }, 2000); 
-  });
-  
+  // Disable browser's scroll restoration
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  // Force the page to scroll to the top
+  window.scrollTo(0, 0);
+
+  // Optional: If you have a loader, lock the scroll during the loading phase
+  document.body.style.overflow = "hidden"; // Disable scrolling
+
+  setTimeout(() => {
+    document.body.style.overflow = "auto"; // Re-enable scrolling
+    const loader = document.getElementById("loader");
+    if (loader) loader.style.display = "none"; // Hide the loader
+  }, 2000); // Adjust the delay as needed
+});
+
+
+
 
 
 // Select the content elements to animate
@@ -131,9 +139,9 @@ document.addEventListener('DOMContentLoaded', observeTimeline);
 
 
 
-window.onload = function() {
-  window.scrollTo(0, 0);
-};
+// window.onload = function() {
+//   window.scrollTo(0, 0);
+// };
 
 
 document.getElementById("scroll-to-top").addEventListener("click", () => {
