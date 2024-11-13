@@ -493,9 +493,12 @@ nav a:hover::after {
     
   }
 
+  .plans_headline{
+    padding: 0 !important;
+  }
+
   .plans_headline p{
     font-size: 24px !important;
-    padding: 0 !important;
   }
 
   .future_plans{
