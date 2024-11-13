@@ -77,19 +77,33 @@ body::before {
   rotate: 180deg;
 }
 
-
-body::after2 { /* Adding the new pseudo-element */
+.background-layer-3 {
   content: '';
   position: absolute;
-  z-index: -4; /* Ensure it layers correctly */
-  top: 220dvh; /* Adjust as needed to place it below the existing layers */
+  z-index: -4;
+  top: 220dvh;
   left: 0;
   width: 100%;
-  height: 100dvh; /* Define its size */
-  background-image: url('../assets/OrangeBG.png'), url('../assets/GlowGreen.png'); /* Replace with your new images */
+  height: 100dvh;
+  background-image: url('../assets/OrangeBG.png'), url('../assets/GlowGreen.png');
   background-size: cover, contain;
   background-position: center, left bottom;
   background-repeat: no-repeat, no-repeat;
+}
+
+.background-layer-4 {
+  content: '';
+  position: absolute;
+  z-index: -3;
+  top: 300dvh; /* Starts after the initial viewport height */
+  left: 0;
+  width: 100%;
+  height: 100dvh; /* This is the height of the 3rd background image */
+  background-image: url('../assets/BG.png'), url('../assets/GlowOrange.png');
+  background-size:  cover, contain;
+  background-position: right, right;
+  background-repeat: no-repeat, no-repeat;
+  rotate: 180deg;
 }
 
 .container{
@@ -111,10 +125,10 @@ body::after2 { /* Adding the new pseudo-element */
 }
 
 .future_plans{
-  height: 100%;
+  /* height: 100%; */
   margin-top: 150px;
   z-index: -1;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -762,6 +776,15 @@ main {
   display: flex;
   justify-content: space-around;
   margin-top: 76px;
+}
+
+.plans{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: #ffffff;
+  font-family: var(--secondary-font);
 }
 
 /* .jelifish{
