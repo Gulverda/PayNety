@@ -95,7 +95,7 @@ body::before {
 .background-layer-4 {
   content: '';
   position: absolute;
-  z-index: -3;
+  z-index: -5;
   top: 300dvh;
   left: 0;
   width: 100%;
@@ -148,7 +148,6 @@ body::before {
   font-size: 24px;
   max-width: 445px;
   font-weight: var(--standard);
-  margin-top: 26px;
 }
 
 .img_for_plans{
@@ -161,7 +160,7 @@ body::before {
   background-size: cover;
   height: 100%;
   width: 100%;
-  margin-top: 45px;
+  /* margin-top: 45px; */
 }
 
 .content{
@@ -176,7 +175,8 @@ body::before {
 .content,
 .mission_container,
 .timeline_container,
-.future_plans{
+.future_plans,
+.about_us{
   max-width: 1440px;
   padding: 0 50px;
 }
@@ -376,11 +376,17 @@ nav a:hover::after {
     padding: 30px;
   } */
 
+  .plans_headline p{
+    font-size: 18px !important;
+    padding-left: 30px !important;
+  }
+
+
   .img_for_plans img{
     background-size: cover;
     height: 80%;
     width: 80%;
-    margin-top: 45px;
+    /* margin-top: 45px; */
   }
 
   .future_plans h1{
@@ -395,9 +401,14 @@ nav a:hover::after {
   .content,
 .mission_container,
 .timeline_container,
-.future_plans{
+.future_plans,
+.about_us{
   max-width: 1440px;
   padding: 0 30px;
+}
+
+.about-us{
+  padding: 0 !important;
 }
 
 .nav{
@@ -444,6 +455,14 @@ nav a:hover::after {
   .plans{
     flex-direction: column;
     align-items: center;
+    border: none !important;
+    background: none !important;
+    
+  }
+
+  .plans_headline p{
+    font-size: 24px !important;
+    padding: 0 !important;
   }
 
   .future_plans{
@@ -459,7 +478,13 @@ nav a:hover::after {
     width: 100%;
   }
 
-  
+  .cards{
+    flex-direction: column;
+  }
+
+  .card{
+    padding: 30px !important;
+  }
 
   .nav{
     padding: 0 !important;
@@ -806,13 +831,30 @@ main {
 }
 
 .plans{
-  display: flex;
-  justify-content: space-between;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+    /* border: 1px solid; */
+    display: flex;
+    background: rgba(109, 107, 107, 0.1);
+    border-radius: 27px;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 20px;
+    color: #ffffff;
+    font-family: var(--secondary-font);
+  /* display: flex;
+  justify-content: space-between; */
   /* flex-direction: column; */
   /* align-items: center; */
-  gap: 20px;
+  /* gap: 20px;
   color: #ffffff;
-  font-family: var(--secondary-font);
+  font-family: var(--secondary-font); */
+}
+
+.plans_headline p{
+  padding-left: 50px;
+  margin-top: 0;
 }
 
 /* .jelifish{
@@ -1101,3 +1143,52 @@ footer {
   width: 100%;
   padding: 0 50px;
 }
+
+
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  width: 100%;
+  margin-top: 50px;
+  /* padding: 50px; */
+  /* margin: 50px 0; */
+}
+
+.about-us h1 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+.cards {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  background: rgba(109, 107, 107, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 50px;
+  /* width: 300px; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.card p {
+  line-height: 1.6;
+  color: #dcdcdc;
+}
+
+
