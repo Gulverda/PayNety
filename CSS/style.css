@@ -127,6 +127,7 @@ body::before {
 .future_plans{
   /* height: 100%; */
   margin-top: 150px;
+  margin-bottom: 50px;
   z-index: -1;
   /* width: 100%; */
   display: flex;
@@ -143,7 +144,7 @@ body::before {
 }
 
 .future_plans p{
-  font-size: 32px;
+  font-size: 24px;
   font-weight: var(--standard);
   margin-top: 26px;
 }
@@ -425,6 +426,10 @@ nav a:hover::after {
     padding: 0;
   }
 
+  .future_plans{
+    text-align: center;
+  }
+
   .future_plans h1{
     font-size: 36px;
   }
@@ -570,7 +575,6 @@ main {
 
 @media screen and (max-width: 520px) {  
   .future_plans p{
-    text-align: center;
     font-size: 18px;
   }
   
@@ -781,7 +785,7 @@ main {
 .plans{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   gap: 20px;
   color: #ffffff;
   font-family: var(--secondary-font);
