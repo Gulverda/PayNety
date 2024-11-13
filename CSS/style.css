@@ -675,10 +675,16 @@ main {
 }
 
 .timeline_container{
-  width: 100%;
+  /* width: 100%;
   margin-top: 150px;
   height: 100vh;
-  margin-bottom: 50px;
+  margin-bottom: 50px; */
+  margin-top: 150px;
+  z-index: -1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .timeline_section{
@@ -840,6 +846,7 @@ main {
 
 footer {
   background-color: #242424;
+  margin-top: 50px;
   width: 100%;
   color: #fff;
   padding: 20px;

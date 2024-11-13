@@ -67,13 +67,6 @@ function sendMail() {
     window.location.href = "mailto:lukagulverdashvili49@gmail.com";
   }
 
-
-//   const navItems = document.querySelector('.nav-items');
-// function toggleMenu() {
-//   navItems.classList.toggle('show');
-// }
-
-
 const navItems = document.querySelector('.nav-items');
 const menuIcon = document.querySelector('#menu-icon');
 
@@ -136,12 +129,6 @@ function observeTimeline() {
 
 // Call the function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', observeTimeline);
-
-
-
-// window.onload = function() {
-//   window.scrollTo(0, 0);
-// };
 
 
 document.getElementById("scroll-to-top").addEventListener("click", () => {
