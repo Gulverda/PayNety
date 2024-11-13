@@ -28,6 +28,7 @@
 }
 
 body{
+  overflow: hidden;
   /* padding: 0 50px; */
   position: relative;
   height: 100dvh;
@@ -95,7 +96,7 @@ body::before {
   content: '';
   position: absolute;
   z-index: -3;
-  top: 300dvh; /* Starts after the initial viewport height */
+  top: 300dvh;
   left: 0;
   width: 100%;
   height: 100dvh; /* This is the height of the 3rd background image */
@@ -129,7 +130,7 @@ body::before {
   margin-top: 150px;
   margin-bottom: 50px;
   z-index: -1;
-  /* width: 100%; */
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -145,8 +146,14 @@ body::before {
 
 .future_plans p{
   font-size: 24px;
+  max-width: 445px;
   font-weight: var(--standard);
   margin-top: 26px;
+}
+
+.img_for_plans{
+  display: flex;
+  justify-content: flex-end;
 }
 
 
@@ -369,12 +376,20 @@ nav a:hover::after {
     padding: 30px;
   } */
 
+  .img_for_plans img{
+    background-size: cover;
+    height: 80%;
+    width: 80%;
+    margin-top: 45px;
+  }
+
   .future_plans h1{
     font-size: 42px;
   }
   
   .future_plans p{
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 20px;
   }
 
   .content,
@@ -426,6 +441,11 @@ nav a:hover::after {
     padding: 0;
   }
 
+  .plans{
+    flex-direction: column;
+    align-items: center;
+  }
+
   .future_plans{
     text-align: center;
   }
@@ -433,10 +453,12 @@ nav a:hover::after {
   .future_plans h1{
     font-size: 36px;
   }
-  
-  .future_plans p{
-    font-size: 20px;
+
+  .img_for_plans img{
+    height: 100%;
+    width: 100%;
   }
+
   
 
   .nav{
@@ -778,13 +800,15 @@ main {
 
 .timeline_section{
   display: flex;
+  width: 100%;
   justify-content: space-around;
   margin-top: 76px;
 }
 
 .plans{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  /* flex-direction: column; */
   /* align-items: center; */
   gap: 20px;
   color: #ffffff;
@@ -1053,7 +1077,7 @@ footer {
   footer{
     /* margin-top: 180px; */
     position: relative;
-    margin-top: 250px !important;
+    /* margin-top: 250px !important; */
   }
 
   .footer-container {
