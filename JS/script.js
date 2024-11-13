@@ -64,7 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function sendMail() {
-    window.location.href = "mailto:lukagulverdashvili49@gmail.com";
+    // window.location.href = "mailto:lukagulverdashvili49@gmail.com";
+    window.location.href = "mailto:info@PayNety.com";
   }
 
 const navItems = document.querySelector('.nav-items');
