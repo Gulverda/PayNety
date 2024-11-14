@@ -80,6 +80,7 @@ body{
   gap: 20px;
   color: #ffffff;
   font-family: var(--secondary-font);
+  padding-top: 30px;
 }
 
 .future_plans h1{
@@ -807,6 +808,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 30px;
 }
 
 .timeline_section{
