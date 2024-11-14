@@ -272,7 +272,8 @@ nav a:hover::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  margin-top: 60px;
   gap: 20px;
 }
 
@@ -372,9 +373,9 @@ nav a:hover::after {
     /* margin-top: 45px; */
   }
 
-  .future_plans h1{
+  /* .future_plans h1{
     font-size: 42px;
-  }
+  } */
   
   .future_plans p{
     /* font-size: 24px; */
@@ -440,7 +441,12 @@ nav a:hover::after {
     align-items: center;
     border: none !important;
     background: none !important;
-    
+  }
+
+  .right_side_of_footer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .plans_headline{
@@ -1014,11 +1020,17 @@ footer {
 
 .footer-container {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   /* justify-content: space-between; */
   gap: 80px;
   align-items: flex-start;
   margin-bottom: 20px;
+}
+
+.right_side_of_footer{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .footer-logo img {
@@ -1063,7 +1075,7 @@ footer {
   display: flex;
   /* flex-wrap: wrap;
   justify-content: space-between; */
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   font-size: 0.9rem;
   border-top: 1px solid #444;
@@ -1082,7 +1094,8 @@ footer {
 
 #scroll-to-top {
   position: fixed;
-  bottom: 20px;
+  /* bottom: 20px; */
+  bottom: 100px;
   right: 20px;
   background-color: var(--orange-color);
   color: white;
@@ -1095,9 +1108,6 @@ footer {
   display: none; /* Initially hidden */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #scroll-to-top:hover {
@@ -1208,7 +1218,7 @@ footer {
   margin-bottom: 10px;
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--text-color);
+  color: var(--green-color);
 }
 
 .card p {
