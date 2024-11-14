@@ -132,10 +132,29 @@ function observeTimeline() {
 document.addEventListener('DOMContentLoaded', observeTimeline);
 
 
-document.getElementById("scroll-to-top").addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+// document.getElementById("scroll-to-top").addEventListener("click", () => {
+//   window.scrollTo({ top: 0, behavior: "smooth" });
+// });
 
+// Get the button
+const scrollUpBtn = document.getElementById("scroll-to-top");
+
+// When the user scrolls down 300px from the top, show the button
+window.onscroll = function() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    scrollUpBtn.style.display = "block";
+  } else {
+    scrollUpBtn.style.display = "none";
+  }
+};
+
+// Scroll to the top of the page when the button is clicked
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Smooth scroll
+  });
+}
 
 
 
