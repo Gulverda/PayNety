@@ -31,6 +31,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body{
@@ -1121,6 +1122,9 @@ footer {
   gap: 30px;
 
   & h1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
     font-size: clamp(1.3rem, 5.5vw, 10rem);
     color: transparent;
     position: relative;
@@ -1164,6 +1168,19 @@ footer {
     gap: 20px;
   }
 }
+
+@media screen and (max-width: 450px){
+  .under_construction{
+    & .maint_img {
+      max-width: 50px;
+    }
+    & .logo_for_maint {
+      max-width: 150px;
+      width: 100%;
+    }
+  }
+}
+
 
 @keyframes animateStroke {
   0% {
